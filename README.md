@@ -48,8 +48,8 @@ deactivate A;
 
 ![Alt text](http://g.gravizo.com/g?
 @startuml;
-node nginx <<docker container>>;
-node gitlab;
+node nginx <<docker container>> as nginx;
+node gitlab <<docker container>>;
 [jenkins];
 [sonarqube];
 [nexus];
