@@ -6,7 +6,7 @@ This is a repository for creating a development paas with docker compose.
 #GOALS:
 Create an infrastructure to manage the Development Life cycle
 
-![Alt text](http://g.gravizo.com/g?
+<img src='http://g.gravizo.com/g?
   @startuml;
   actor User;
   participant "First Class" as A;
@@ -31,4 +31,4 @@ Create an infrastructure to manage the Development Life cycle
   A --> User: Done;
   deactivate A;
   @enduml
-)
+'>
