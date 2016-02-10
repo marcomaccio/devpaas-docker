@@ -9,7 +9,7 @@ Create an infrastructure to manage the Development Life cycle
 
 ![Alt text](http://g.gravizo.com/g?
 @startuml;
-title devpaas container architecture
+title devpaas container architecture;
 
 [nginx];
 [gitlab];
