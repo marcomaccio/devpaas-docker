@@ -1,0 +1,37 @@
+########################################################################
+#
+# title:       Docker Compose YAML file for DEV-PAAS
+# author:      Marco Maccio (http://marmac.name)
+# url:         https://github.com/marcomaccio/devpaas-docker
+# description: Builds (4) images, pulls (2) images, and builds (9) containers,
+#              for the Development PAAS example REST API
+# to run:      docker-compose -p devpaas up -d
+#
+########################################################################
+
+cis-dv:
+  image: jenkins
+  volumes:
+   - /var/jenkins_home
+
+
+cis:
+  build: jenkins/
+  ports:
+   - "8080:8080"
+   - "50002:50000"
+  expose:
+    - "8080"
+  volumes_from:
+   - cis-dv
+  links:
+  - cis-dv
+  extra_hosts:
+    - "devpaas.marmac:192.168.99.100"
+
+nginx:
+  build: nginx/
+  ports:
+   - "80:80"
+  links:
+   - cis
