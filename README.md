@@ -50,14 +50,19 @@ deactivate A;
 @startuml;
 node nginx <<docker container>> as nginx;
 node gitlab <<docker container>> as scm;
+node gerrit <<docker container>> as rwms;
 node jenkins <<docker container>> as cis;
 node sonarqube <<docker container>> as qms;
 node nexus <<docker container>> as rms;
-nginx -> gitlab;
-scm -> [mariadb-gitlab];
+database mariadb-gitlab;
+database mariadb-gerrit;
+database mariadb-sonarqube;
+nginx -> scm;
+scm -> mariadb-gitlab;
+rwms -> mariadb-gerrit;
 nginx -> cis;
 nginx -> qms;
-qms -> [mariadb-sonarqube];
+qms -> mariadb-sonarqube;
 nginx -> rms;
 @enduml
 )
