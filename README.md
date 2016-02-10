@@ -9,17 +9,14 @@ Create an infrastructure to manage the Development Life cycle
 ![Alt text](http://g.gravizo.com/g?
   digraph G {
     aize ="4,4";
-    main [shape=box];
-    main -> parse [weight=8];
-    parse -> execute;
-    main -> init [style=dotted];
-    main -> cleanup;
-    execute -> { make_string; printf}
-    init -> make_string;
-    edge [color=red];
-    main -> printf [style=bold,label="100 times"];
-    make_string [label="make a string"];
-    node [shape=box,style=filled,color=".7 .3 1.0"];
-    execute -> compare;
+    nginx [shape=box];
+    nginx -> gitlab [shape=box];
+    nginx -> gerrit [shape=box];
+    nginx -> jenkins [shape=box];
+    nginx -> sonarqube [shape=box];
+    nginx -> nexus [shape=box];
+    gitlab -> mariadb-gitlab [shape=box];
+    gerrit -> mariadb-gerrit [shape=box];
+    sonarqube -> mariadb-sonarqube [shape=box];
   }
 )
