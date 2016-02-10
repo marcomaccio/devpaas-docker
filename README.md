@@ -29,8 +29,6 @@ deactivate A;
 
 ![Alt text](http://g.gravizo.com/g?
 @startuml;
-title devpaas container architecture;
-
 [nginx];
 [gitlab];
 [jenkins];
@@ -39,13 +37,11 @@ title devpaas container architecture;
 [mariadb-gitlab];
 [mariadb-gerrit];
 [mariadb-sonarqube];
-
 [nginx] -> [gitlab];
 [gitlab] -> [mariadb-gitlab];
 [nginx] -> [jenkins];
 [nginx] -> [sonarqube];
 [sonarqube] -> [mariadb-sonarqube];
 [nginx] -> [nexus];
-
 @enduml
 )
