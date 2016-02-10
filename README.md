@@ -19,6 +19,7 @@ database mariadb_gitlab <<docker container>>;
 database mariadb_gerrit <<docker container>>;
 database mariadb_sonarqube <<docker container>>;
 nginx -down-> scm;
+nginx -down-> rwms;
 scm -down-> mariadb_gitlab;
 rwms -down-> mariadb_gerrit;
 nginx -down-> cis;
