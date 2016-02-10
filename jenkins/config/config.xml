@@ -1,0 +1,113 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<hudson>
+  <disabledAdministrativeMonitors/>
+  <version>1.624</version>
+  <numExecutors>4</numExecutors>
+  <mode>NORMAL</mode>
+
+  <useSecurity>false</useSecurity>
+
+  <disableRememberMe>false</disableRememberMe>
+  <projectNamingStrategy class="jenkins.model.ProjectNamingStrategy$DefaultProjectNamingStrategy"/>
+  <workspaceDir>${ITEM_ROOTDIR}/workspace</workspaceDir>
+  <buildsDir>${ITEM_ROOTDIR}/builds</buildsDir>
+  <markupFormatter class="hudson.markup.EscapedMarkupFormatter"/>
+
+  <jdks>
+    <jdk>
+      <name>jdk-7u80</name>
+      <home></home>
+      <properties>
+        <hudson.tools.InstallSourceProperty>
+          <installers>
+            <hudson.tools.JDKInstaller>
+              <id>jdk-7u80-oth-JPR</id>
+              <acceptLicense>true</acceptLicense>
+            </hudson.tools.JDKInstaller>
+          </installers>
+        </hudson.tools.InstallSourceProperty>
+      </properties>
+    </jdk>
+    <jdk>
+      <name>jdk-8u51</name>
+      <home></home>
+      <properties>
+        <hudson.tools.InstallSourceProperty>
+          <installers>
+            <hudson.tools.JDKInstaller>
+              <id>jdk-8u51-oth-JPR</id>
+              <acceptLicense>true</acceptLicense>
+            </hudson.tools.JDKInstaller>
+          </installers>
+        </hudson.tools.InstallSourceProperty>
+      </properties>
+    </jdk>
+  </jdks>
+
+  <viewsTabBar class="hudson.views.DefaultViewsTabBar"/>
+  <myViewsTabBar class="hudson.views.DefaultMyViewsTabBar"/>
+  <clouds/>
+  <quietPeriod>5</quietPeriod>
+  <scmCheckoutRetryCount>0</scmCheckoutRetryCount>
+
+  <views>
+    <hudson.model.AllView>
+      <owner class="hudson" reference="../../.."/>
+      <name>All</name>
+      <filterExecutors>false</filterExecutors>
+      <filterQueue>false</filterQueue>
+      <properties class="hudson.model.View$PropertyList"/>
+    </hudson.model.AllView>
+    <!-- Setting to enable the automatic creation of a view in the Jenkins view bar
+    <se.diabol.jenkins.pipeline.DeliveryPipelineView plugin="delivery-pipeline-plugin@0.9.7">
+      <owner class="hudson" reference="../../.."/>
+      <name>VIEW_NAME</name>
+      <filterExecutors>false</filterExecutors>
+      <filterQueue>false</filterQueue>
+      <properties class="hudson.model.View$PropertyList"/>
+      <componentSpecs>
+        <se.diabol.jenkins.pipeline.DeliveryPipelineView_-ComponentSpec>
+          <name>VIEW-NAME</name>
+          <firstJob>FIRST_JOB</firstJob>
+          <lastJob>LAST_JOB</lastJob>
+        </se.diabol.jenkins.pipeline.DeliveryPipelineView_-ComponentSpec>
+      </componentSpecs>
+      <noOfPipelines>5</noOfPipelines>
+      <showAggregatedPipeline>true</showAggregatedPipeline>
+      <noOfColumns>3</noOfColumns>
+      <sorting>se.diabol.jenkins.pipeline.sort.LatestActivityComparator</sorting>
+      <showAvatars>true</showAvatars>
+      <updateInterval>2</updateInterval>
+      <showChanges>true</showChanges>
+      <allowManualTriggers>true</allowManualTriggers>
+      <showTotalBuildTime>true</showTotalBuildTime>
+      <allowRebuild>true</allowRebuild>
+      <allowPipelineStart>true</allowPipelineStart>
+      <showDescription>true</showDescription>
+      <showPromotions>true</showPromotions>
+      <showTestResults>true</showTestResults>
+      <showStaticAnalysisResults>true</showStaticAnalysisResults>
+      <regexpFirstJobs/>
+    </se.diabol.jenkins.pipeline.DeliveryPipelineView>
+    -->
+  </views>
+
+  <primaryView>All</primaryView>
+  <slaveAgentPort>0</slaveAgentPort>
+  <label>A Jenkins-CI Server created via Docker</label>
+  <nodeProperties/>
+
+  <globalNodeProperties>
+
+    <hudson.tools.ToolLocationNodeProperty>
+      <locations>
+        <hudson.tools.ToolLocationNodeProperty_-ToolLocation>
+          <type>hudson.tasks.Ant$AntInstallation$DescriptorImpl</type>
+          <name>ant-1.9.4</name>
+          <home></home>
+        </hudson.tools.ToolLocationNodeProperty_-ToolLocation>
+      </locations>
+    </hudson.tools.ToolLocationNodeProperty>
+  </globalNodeProperties>
+
+</hudson>

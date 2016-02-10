@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<org.jenkinsci.plugins.configfiles.maven.DefaultMavenSettingsProvider plugin="config-file-provider@2.9.3">
+  <configs>
+    <entry>
+      <string>org.jenkinsci.plugins.configfiles.maven.MavenSettingsConfig1434975788753</string>
+      <org.jenkinsci.plugins.configfiles.maven.MavenSettingsConfig>
+        <id>org.jenkinsci.plugins.configfiles.maven.MavenSettingsConfig1434975788753</id>
+        <name>docker-devpaas-settings</name>
+        <comment>Maven settings file to point to the Repository Management Service of docker-devpaas</comment>
+        <content>
+
+        </content>
+        <serverCredentialMappings>
+          <org.jenkinsci.plugins.configfiles.maven.security.ServerCredentialMapping>
+            <serverId>docker-devpaas-rms</serverId>
+            <credentialsId>791eb5ea-3415-437e-99a3-46e6fe548669</credentialsId>
+          </org.jenkinsci.plugins.configfiles.maven.security.ServerCredentialMapping>
+          <org.jenkinsci.plugins.configfiles.maven.security.ServerCredentialMapping>
+            <serverId>docker-devpaas-rms</serverId>
+            <credentialsId>bdb3d7d6-f4bc-40e3-80e2-5246f09ef45d</credentialsId>
+          </org.jenkinsci.plugins.configfiles.maven.security.ServerCredentialMapping>
+        </serverCredentialMappings>
+        <isReplaceAll>true</isReplaceAll>
+      </org.jenkinsci.plugins.configfiles.maven.MavenSettingsConfig>
+    </entry>
+  </configs>
+</org.jenkinsci.plugins.configfiles.maven.DefaultMavenSettingsProvider>
