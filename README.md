@@ -9,14 +9,14 @@ Create an infrastructure to manage the Development Life cycle
 
 ![Alt text](http://g.gravizo.com/g?
 @startuml;
-node nginx      <<docker container>> ;
-node gitlab     <<docker container>> ;
-node jenkins    <<docker container>> ;
-node sonarqube  <<docker container>> ;
-node nexus      <<docker container>> ;
-node mariadb-gitlab     <<docker container>>;
-node mariadb-gerrit     <<docker container>>;
-node mariadb-sonarqube  <<docker container>>;
+node nginx <<docker container>> ;
+node gitlab <<docker container>> ;
+node jenkins <<docker container>> ;
+node sonarqube <<docker container>> ;
+node nexus <<docker container>> ;
+node mariadb-gitlab <<docker container>>;
+node mariadb-gerrit <<docker container>>;
+node mariadb-sonarqube <<docker container>>;
 
 nginx -> gitlab;
 gitlab -> mariadb-gitlab;
