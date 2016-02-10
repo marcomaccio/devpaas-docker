@@ -18,12 +18,12 @@ node nexus <<docker container>> as rms;
 database mariadb_gitlab <<docker container>>;
 database mariadb_gerrit <<docker container>>;
 database mariadb_sonarqube <<docker container>>;
-nginx -> scm;
-scm -> mariadb_gitlab;
-rwms -> mariadb_gerrit;
-nginx -> cis;
-nginx -> qms;
-qms -> mariadb_sonarqube;
-nginx -> rms;
+nginx -down-> scm;
+scm -down-> mariadb_gitlab;
+rwms -down-> mariadb_gerrit;
+nginx -down-> cis;
+nginx -down-> qms;
+qms -down-> mariadb_sonarqube;
+nginx -down-> rms;
 @enduml
 )
