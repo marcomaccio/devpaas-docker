@@ -27,9 +27,9 @@ nginx -down-> qms;
 qms -down-> mariadb_sonarqube;
 nginx -down-> rms;
 skinparam node {
-	borderColor White
-	backgroundColor Blue
-	backgroundColor<<docker container>> White
+	borderColor White;
+	backgroundColor Blue;
+	backgroundColor<<docker container>> White;
 }
 @enduml
 )
