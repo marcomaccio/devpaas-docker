@@ -45,3 +45,22 @@ deactivate A;
 [nginx] -> [nexus];
 @enduml
 )
+
+![Alt text](http://g.gravizo.com/g?
+@startuml;
+node nginx;
+node gitlab;
+[jenkins];
+[sonarqube];
+[nexus];
+[mariadb-gitlab];
+[mariadb-gerrit];
+[mariadb-sonarqube];
+nginx -> gitlab;
+gitlab -> [mariadb-gitlab];
+[nginx] -> [jenkins];
+[nginx] -> [sonarqube];
+[sonarqube] -> [mariadb-sonarqube];
+[nginx] -> [nexus];
+@enduml
+)
