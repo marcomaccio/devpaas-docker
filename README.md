@@ -49,18 +49,15 @@ deactivate A;
 ![Alt text](http://g.gravizo.com/g?
 @startuml;
 node nginx <<docker container>> as nginx;
-node gitlab <<docker container>>;
-[jenkins];
-[sonarqube];
-[nexus];
-[mariadb-gitlab];
-[mariadb-gerrit];
-[mariadb-sonarqube];
+node gitlab <<docker container>> as scm;
+node jenkins <<docker container>> as cis;
+node sonarqube <<docker container>> as qms;
+node nexus <<docker container>> as rms;
 nginx -> gitlab;
-gitlab -> [mariadb-gitlab];
-[nginx] -> [jenkins];
-[nginx] -> [sonarqube];
-[sonarqube] -> [mariadb-sonarqube];
-[nginx] -> [nexus];
+scm -> [mariadb-gitlab];
+nginx -> cis;
+nginx -> qms;
+qms -> [mariadb-sonarqube];
+nginx -> rms;
 @enduml
 )
