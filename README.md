@@ -58,11 +58,11 @@ database mariadb_gitlab;
 database mariadb_gerrit;
 database mariadb_sonarqube;
 nginx -> scm;
-scm -> mariadb-gitlab;
-rwms -> mariadb-gerrit;
+scm -> mariadb_gitlab;
+rwms -> mariadb_gerrit;
 nginx -> cis;
 nginx -> qms;
-qms -> mariadb-sonarqube;
+qms -> mariadb_sonarqube;
 nginx -> rms;
 @enduml
 )
