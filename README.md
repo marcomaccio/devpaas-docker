@@ -20,3 +20,11 @@ Create an infrastructure to manage the Development Life cycle
     sonarqube -> mariadb-sonarqube [shape=box];
   }
 )
+
+![Alt text](http://g.gravizo.com/g?
+@startuml;
+node nginx <<docker container>>;
+node gitlab <<docker container>>;
+database Production;
+@enduml
+)
