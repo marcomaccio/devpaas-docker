@@ -9,26 +9,23 @@ Create an infrastructure to manage the Development Life cycle
 
 ![Alt text](http://g.gravizo.com/g?
 @startuml;
-node nginx;
-node gitlab;
-node jenkins;
-node sonarqube;
-node nexus;
-node mariadb-gitlab;
-node mariadb-gerrit;
-node mariadb-sonarqube;
+title devpaas container architecture
 
-nginx -> gitlab;
-gitlab -> mariadb-gitlab;
-nginx -> jenkins;
-nginx -> sonarqube;
-sonarqube -> mariadb-sonarqube;
-nginx -> nexus;
+[nginx];
+[gitlab];
+[jenkins];
+[sonarqube];
+[nexus];
+[mariadb-gitlab];
+[mariadb-gerrit];
+[mariadb-sonarqube];
 
-skinparam node {
-	borderColor White
-	backgroundColor Blue
-	backgroundColor<<docker container>> White
-}
+[nginx] -> [gitlab];
+[gitlab] -> [mariadb-gitlab];
+[nginx] -> [jenkins];
+[nginx] -> [sonarqube];
+[sonarqube] -> [mariadb-sonarqube];
+[nginx] -> [nexus];
+
 @enduml
 )
