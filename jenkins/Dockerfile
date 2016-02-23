@@ -1,4 +1,4 @@
-FROM jenkins
+FROM jenkins:latest
 
 MAINTAINER Marco Maccio <marco.maccio@marmac.name>
 

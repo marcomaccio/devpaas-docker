@@ -5,7 +5,7 @@
 # url:         https://github.com/marcomaccio/devpaas-docker
 # description: Builds (4) images, pulls (2) images, and builds (9) containers,
 #              for the Development PAAS example REST API
-# to run:      docker-compose -p devpaas up -d
+# to run:      docker-compose -p <solutionName> up -d
 #
 ########################################################################
 
@@ -20,8 +20,8 @@ cis:
   ports:
    - "8080:8080"
    - "50002:50000"
-  expose:
-    - "8080"
+  #expose:
+  #  - "8080"
   volumes_from:
    - cis-dv
   links:

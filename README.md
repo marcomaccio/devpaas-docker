@@ -1,9 +1,9 @@
-# docker-devpaas
+# DOCKER-DEVPAAS
 A Development PAAS with Docker
 
 This is a repository for creating a development paas with docker compose.
 
-#GOALS:
+## GOALS:
 Create an infrastructure to manage the Development Life cycle
 
 ![Alt text](http://g.gravizo.com/g?
