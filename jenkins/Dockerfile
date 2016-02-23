@@ -19,4 +19,7 @@ COPY config/credentials.xml /usr/share/jenkins/ref/credentials.xml
 
 COPY config/config.xml /usr/share/jenkins/ref/config.xml
 
+# ENV JENKINS_OPTS --prefix=/jenkins --httpsPort=8090
+# EXPOSE 8090
+
 ENV JENKINS_OPTS --prefix=/jenkins
