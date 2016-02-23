@@ -15,6 +15,8 @@ node gerrit <<docker container>> as rwms;
 node jenkins <<docker container>> as cis;
 node sonarqube <<docker container>> as qms;
 node nexus <<docker container>> as rms;
+node elk <<docker container>> as elk;
+node logspout <<docker container>> as logspout;
 database mariadb_gitlab <<docker container>>;
 database mariadb_gerrit <<docker container>>;
 database mariadb_sonarqube <<docker container>>;

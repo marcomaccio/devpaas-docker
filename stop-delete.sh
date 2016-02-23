@@ -15,7 +15,7 @@
 docker stop $1_nginx_1 && docker stop $1_cis_1 && docker stop $1_cis-dv_1
 
 # Delete all the docker container instances
-docker rm $1_nginx_1 && docker rm $1_cis_1 && docker rm $1_cis-dv_1
+#docker rm $1_nginx_1 && docker rm $1_cis_1 && docker rm $1_cis-dv_1
 
 # Delete all the docker images
-docker rmi $1_nginx && docker rmi $1_cis
+#docker rmi $1_nginx && docker rmi $1_cis
