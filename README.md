@@ -28,5 +28,15 @@ nginx -down-> cis;
 nginx -down-> qms;
 qms -down-> mariadb_sonarqube;
 nginx -down-> rms;
+nginx --> logspout;
+cis --> logspout;
+scm --> logspout;
+rwms --> logspout;
+qms --> logspout;
+rms --> logspout;
+mariadb_gitlab --> logspout;
+mariadb_gerrit --> logspout;
+mariadb_sonarqube --> logspout;
+logspout --> elk;
 @enduml
 )

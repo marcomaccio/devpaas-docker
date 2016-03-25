@@ -12,7 +12,12 @@
 ########################################################################
 
 # Stop all the docker container instances of the solutionName
-docker stop $1_nginx_1 && docker stop $1_cis_1 && docker stop $1_cis-dv_1
+docker stop devpaas_nginx_1 &&      \\
+  docker stop devpaas_cis_1 &&      \\
+  docker stop devpaas_cis-dv_1 &&   \\
+  docker stop devpaas_graphite_1 && \\
+  docker stop devpaas_elk_1 &&      \\
+  docker stop devpaas_logspout_1
 
 # Delete all the docker container instances
 #docker rm $1_nginx_1 && docker rm $1_cis_1 && docker rm $1_cis-dv_1
