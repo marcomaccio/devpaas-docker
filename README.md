@@ -15,6 +15,8 @@ node gerrit <<docker container>> as rwms;
 node jenkins <<docker container>> as cis;
 node sonarqube <<docker container>> as qms;
 node nexus <<docker container>> as rms;
+node elk <<docker container>> as elk;
+node logspout <<docker container>> as logspout;
 database mariadb_gitlab <<docker container>>;
 database mariadb_gerrit <<docker container>>;
 database mariadb_sonarqube <<docker container>>;
@@ -26,5 +28,15 @@ nginx -down-> cis;
 nginx -down-> qms;
 qms -down-> mariadb_sonarqube;
 nginx -down-> rms;
+nginx --> logspout;
+cis --> logspout;
+scm --> logspout;
+rwms --> logspout;
+qms --> logspout;
+rms --> logspout;
+mariadb_gitlab --> logspout;
+mariadb_gerrit --> logspout;
+mariadb_sonarqube --> logspout;
+logspout --> elk;
 @enduml
 )

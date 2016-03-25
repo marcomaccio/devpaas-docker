@@ -24,7 +24,7 @@ cis:
   volumes_from:
    - cis-dv
   links:
-  - cis-dv
+   - cis-dv
   extra_hosts:
     - "devpaas.marmac:192.168.99.100"
 
