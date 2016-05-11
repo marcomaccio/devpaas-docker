@@ -10,7 +10,7 @@
 ########################################################################
 
 cis-dv:
-  image: jenkins
+  image: jenkins:1.651.1
   volumes:
    - /var/jenkins_home
 
